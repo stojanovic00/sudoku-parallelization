@@ -1,0 +1,3 @@
+/home/aleksandar/repositories/sudoku-parallelization/cmake-build-debug/CMakeFiles/sudoku_parallelization.dir
+/home/aleksandar/repositories/sudoku-parallelization/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/aleksandar/repositories/sudoku-parallelization/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,5 @@
+# ninja log v5
+1	36	1704826011461726700	CMakeFiles/sequential_impl.dir/main.c.o	6863f50138840c39
+38	60	1704826011485421300	sequential_impl	f64a3c3b4b44d926
+0	45	1704833008603607100	CMakeFiles/sequential_impl.dir/main.c.o	6863f50138840c39
+45	70	1704833008627525300	sequential_impl	f64a3c3b4b44d926
