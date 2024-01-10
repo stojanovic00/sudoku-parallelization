@@ -263,7 +263,37 @@ unsigned subtractPossibility(unsigned possibilities, unsigned possibility){
 }
 
 //RULE 1 - removes value of cell from all possibilities of cells in its units
-void propagateRulesForCell(SudokuGrid grid, int row, int col){
+bool propagateRulesForCell(SudokuGrid grid, int row, int col){
+
+    //Check for contradiction horizontal
+    for(int i =0; i < SUDOKU_SIZE;i++){
+        if( i == col) { continue;}
+        if(grid[row][i].value == grid[row][col].value){
+            return false;
+        }
+    }
+
+    //Check for contradiction vertical
+    for(int i =0; i < SUDOKU_SIZE;i++){
+        if( i == row) { continue;}
+        if(grid[i][col].value == grid[row][col].value){
+            return false;
+        }
+    }
+
+    //Check for contradiction box
+    int sudokuSizeRoot = (int) sqrt(SUDOKU_SIZE);
+    int horizontal_start = (row / sudokuSizeRoot) * sudokuSizeRoot;
+    int vertical_start = (col / sudokuSizeRoot) * sudokuSizeRoot;
+    for(int i = horizontal_start; i < horizontal_start + sudokuSizeRoot; i++){
+        for(int j = vertical_start; j < vertical_start + sudokuSizeRoot; j++){
+            if( i == row && j == col) { continue;}
+            if(grid[i][j].value == grid[row][col].value){
+                return false;
+            }
+        }
+    }
+
     //Remove from horizontal unit
     for(int i =0; i < SUDOKU_SIZE;i++){
         grid[row][i].possibilities = subtractPossibility(grid[row][i].possibilities,
@@ -276,15 +306,14 @@ void propagateRulesForCell(SudokuGrid grid, int row, int col){
                                                          possibility_convertToBin(grid[row][col].value));
     }
     //Remove from box unit
-    int sudokuSizeRoot = (int) sqrt(SUDOKU_SIZE);
-    int horizontal_start = (row / sudokuSizeRoot) * sudokuSizeRoot;
-    int vertical_start = (col / sudokuSizeRoot) * sudokuSizeRoot;
     for(int i = horizontal_start; i < horizontal_start + sudokuSizeRoot; i++){
         for(int j = vertical_start; j < vertical_start + sudokuSizeRoot; j++){
             grid[i][j].possibilities = subtractPossibility(grid[i][j].possibilities,
                                                            possibility_convertToBin(grid[row][col].value));
         }
     }
+
+    return true;
 }
 
 
