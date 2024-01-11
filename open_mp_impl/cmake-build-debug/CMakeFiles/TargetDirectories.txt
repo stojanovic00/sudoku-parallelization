@@ -1,0 +1,3 @@
+/home/aleksandar/repositories/sudoku-parallelization/open_mp_impl/cmake-build-debug/CMakeFiles/open_mp_impl.dir
+/home/aleksandar/repositories/sudoku-parallelization/open_mp_impl/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/aleksandar/repositories/sudoku-parallelization/open_mp_impl/cmake-build-debug/CMakeFiles/rebuild_cache.dir

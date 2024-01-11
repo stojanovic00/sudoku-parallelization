@@ -90,9 +90,18 @@
   - u vimu na pomocu makroa pretvoriti copirani tekst u csv fajl
   - na kraju ovoga smo obezbedili ulaz i zeljeni izlaz algoritma
 
+## Constraint propagation
+- napisao sam svoju implementaciju koja je malo optimizovala koriscenje memorije tako sto se umesto niza cifara(ili karaktera) koristion jedan unsigned int koji je informacije o jednom broju cuvao unutar jednog bita
+  - ovo je neke delove implementacije zakomplikovalo, dok je je priroda binarnih operacija veoma lepo nalegla na ideju izbacivanja potencijalnih vrednosti za jednu celiju
 
+## Search
 
-### TODO
-- napisi validator
-- CP alg
-- SM alg
+- search se zasniva na dfs algoritmu koji ce biti tema dalje paralelizacije
+
+## Testiranje
+
+- dve mogucnosti u zavisnosti od preciznosti njihovih merenja
+  - high precision clock unutar samog programa, pa da se rezultat ispisuje na izlazi
+  - alat poput linux "time"
+
+- u oba slucaja, pisace se shell skripta koja ce pokretati test scenario
