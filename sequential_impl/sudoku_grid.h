@@ -6,10 +6,10 @@
 #include <stdbool.h>
 #include "math.h"
 
-//#define SUDOKU_SIZE 9
-//#define ALL_POSSIBILITIES_VAL 0b111111111 //one place for each num from 1 to 9
-#define SUDOKU_SIZE 16
-#define ALL_POSSIBILITIES_VAL 0b1111111111111111 //one place for each num from 1 to 16
+#define SUDOKU_SIZE 9
+#define ALL_POSSIBILITIES_VAL 0b111111111 //one place for each num from 1 to 9
+//#define SUDOKU_SIZE 16
+//#define ALL_POSSIBILITIES_VAL 0b1111111111111111 //one place for each num from 1 to 16
 
 typedef struct {
     int value;

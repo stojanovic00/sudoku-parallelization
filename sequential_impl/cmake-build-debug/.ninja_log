@@ -34,3 +34,9 @@
 0	38	1704995214853602900	CMakeFiles/sequential_impl.dir/sudoku_grid.c.o	56213efbe711de42
 1	38	1704995214853817800	CMakeFiles/sequential_impl.dir/constraint_propagation.c.o	8447ca4df7863fc9
 38	60	1704995214875349200	sequential_impl	84952f5a5cac80d
+0	33	1704996234649847400	CMakeFiles/sequential_impl.dir/main.c.o	6863f50138840c39
+0	36	1704996234652721700	CMakeFiles/sequential_impl.dir/sudoku_grid.c.o	56213efbe711de42
+0	37	1704996234653403300	CMakeFiles/sequential_impl.dir/constraint_propagation.c.o	8447ca4df7863fc9
+37	58	1704996234673822400	sequential_impl	84952f5a5cac80d
+1	43	1705058292655314600	CMakeFiles/sequential_impl.dir/main.c.o	6863f50138840c39
+43	67	1705058292679016300	sequential_impl	84952f5a5cac80d

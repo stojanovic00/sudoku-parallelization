@@ -94,8 +94,8 @@ int main(int argc, char** argv){
     if(grid == NULL){
         return 1;
     }
-    printf("Original:\n");
-    printSudokuGrid(grid);
+//    printf("Original:\n");
+//    printSudokuGrid(grid);
 
     //Solve
     SudokuGrid  solved = solve(grid);
@@ -103,8 +103,9 @@ int main(int argc, char** argv){
         printf("Sudoku can't be solved");
         return 1;
     }
-    printf("Solved:\n");
-    printSudokuGrid(solved);
+//    printf("Solved:\n");
+//    printSudokuGrid(solved);
+    printf("Sudoku solved\n");
 
     //Store
     bool stored = storeSudokuGrid(solved, argv[2]);
