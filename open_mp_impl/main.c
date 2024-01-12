@@ -1,13 +1,13 @@
+#include <unistd.h>
+#include <omp.h>
 #include "stdio.h"
 #include "stdbool.h"
 #include "sudoku_grid.h"
 #include "constraint_propagation.h"
-#include "omp.h"
 
 
-SudokuGrid solve(SudokuGrid grid){
+SudokuGrid solve(SudokuGrid grid, bool* stopFlag){
     //CONSTRAINT PROPAGATION
-
     //Initial propagation of rules for cues
     for(int i = 0; i < SUDOKU_SIZE;i++){
         for(int j = 0; j < SUDOKU_SIZE;j++){
@@ -59,7 +59,7 @@ SudokuGrid solve(SudokuGrid grid){
 
 
 
-    //    SEARCH
+    //SEARCH
     int optimal_i, optimal_j;
     findOptimalCandidate(grid, &optimal_i, &optimal_j);
 
@@ -67,22 +67,39 @@ SudokuGrid solve(SudokuGrid grid){
     int possibilities_length;
     extractPossibilities(grid[optimal_i][optimal_j].possibilities, &possibilities, &possibilities_length);
 
+    SudokuGrid finalResult = NULL;
+    //Maximum SUDOKU_SIZE possibilities, so threads also
+    #pragma omp parallel num_threads(SUDOKU_SIZE) shared(finalResult, stopFlag)
+    {
+        #pragma omp for
+        for (int i = 0; i < possibilities_length; i++) {
+            //Check if some thread found solution
+            if (finalResult != NULL || *stopFlag) {
+                continue;
+            }
 
-    for(int i = 0; i < possibilities_length;i++){
-        SudokuGrid guessGrid = copySudokuGrid(grid);
-        guessGrid[optimal_i][optimal_j].value = possibilities[i];
-        guessGrid[optimal_i][optimal_j].possibilities = 0;
+            SudokuGrid guessGrid = copySudokuGrid(grid);
+            guessGrid[optimal_i][optimal_j].value = possibilities[i];
+            guessGrid[optimal_i][optimal_j].possibilities = 0;
 
-        SudokuGrid result = solve(guessGrid);
-        if(result == NULL){
-            //NULL means that this guess consequently violated rules
-            continue ;
-        }else{
-            return result;
+            if(finalResult != NULL || *stopFlag){
+                continue;
+            }
+            SudokuGrid result = solve(guessGrid, stopFlag);
+            if (result == NULL) {
+                //NULL means that this guess consequently violated rules
+                continue;
+            } else {
+                #pragma omp critical
+                {
+                    *stopFlag = true;
+                    finalResult = result;
+                }
+            }
         }
     }
 
-    return NULL;
+    return finalResult;
 }
 
 
@@ -100,8 +117,11 @@ int main(int argc, char** argv){
 //    printf("Original:\n");
 //    printSudokuGrid(grid);
 
-    //Solve
-    SudokuGrid  solved = solve(grid);
+// Slows it down even more
+//    omp_set_nested(1);
+//    omp_set_max_active_levels(10);
+    bool stopFlag = false;
+    SudokuGrid  solved = solve(grid, &stopFlag);
     if(solved == NULL){
         printf("Sudoku can't be solved");
         return 1;
