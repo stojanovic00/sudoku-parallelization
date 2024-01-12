@@ -51,19 +51,19 @@ build cmake_object_order_depends_target_open_mp_impl: phony || CMakeFiles/open_m
 
 build CMakeFiles/open_mp_impl.dir/main.c.o: C_COMPILER__open_mp_impl_unscanned_Debug /home/aleksandar/repositories/sudoku-parallelization/open_mp_impl/main.c || cmake_object_order_depends_target_open_mp_impl
   DEP_FILE = CMakeFiles/open_mp_impl.dir/main.c.o.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always -fopenmp
+  FLAGS = -O3 -g -std=gnu11 -fdiagnostics-color=always -fopenmp
   OBJECT_DIR = CMakeFiles/open_mp_impl.dir
   OBJECT_FILE_DIR = CMakeFiles/open_mp_impl.dir
 
 build CMakeFiles/open_mp_impl.dir/constraint_propagation.c.o: C_COMPILER__open_mp_impl_unscanned_Debug /home/aleksandar/repositories/sudoku-parallelization/open_mp_impl/constraint_propagation.c || cmake_object_order_depends_target_open_mp_impl
   DEP_FILE = CMakeFiles/open_mp_impl.dir/constraint_propagation.c.o.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always -fopenmp
+  FLAGS = -O3 -g -std=gnu11 -fdiagnostics-color=always -fopenmp
   OBJECT_DIR = CMakeFiles/open_mp_impl.dir
   OBJECT_FILE_DIR = CMakeFiles/open_mp_impl.dir
 
 build CMakeFiles/open_mp_impl.dir/sudoku_grid.c.o: C_COMPILER__open_mp_impl_unscanned_Debug /home/aleksandar/repositories/sudoku-parallelization/open_mp_impl/sudoku_grid.c || cmake_object_order_depends_target_open_mp_impl
   DEP_FILE = CMakeFiles/open_mp_impl.dir/sudoku_grid.c.o.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always -fopenmp
+  FLAGS = -O3 -g -std=gnu11 -fdiagnostics-color=always -fopenmp
   OBJECT_DIR = CMakeFiles/open_mp_impl.dir
   OBJECT_FILE_DIR = CMakeFiles/open_mp_impl.dir
 
@@ -76,7 +76,7 @@ build CMakeFiles/open_mp_impl.dir/sudoku_grid.c.o: C_COMPILER__open_mp_impl_unsc
 # Link the executable open_mp_impl
 
 build open_mp_impl: C_EXECUTABLE_LINKER__open_mp_impl_Debug CMakeFiles/open_mp_impl.dir/main.c.o CMakeFiles/open_mp_impl.dir/constraint_propagation.c.o CMakeFiles/open_mp_impl.dir/sudoku_grid.c.o | /usr/lib/libgomp.so /usr/lib/libpthread.a
-  FLAGS = -g
+  FLAGS = -O3 -g
   LINK_LIBRARIES = /usr/lib/libgomp.so  /usr/lib/libpthread.a
   OBJECT_DIR = CMakeFiles/open_mp_impl.dir
   POST_BUILD = :

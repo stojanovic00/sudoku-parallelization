@@ -1,0 +1,10 @@
+# ninja log v5
+0	38	1705089582461072100	CMakeFiles/open_mp_tasks_impl.dir/main.c.o	7273d86314094c92
+39	62	1705089582483813500	open_mp_tasks_impl	6430ae927de23ad7
+0	55	1705086084917867600	CMakeFiles/open_mp_tasks_impl.dir/constraint_propagation.c.o	540fc3b9692afa56
+0	49	1705086084911290400	CMakeFiles/open_mp_tasks_impl.dir/sudoku_grid.c.o	937b4698b25dfa8b
+1	23	1705090024429709500	build.ninja	1bf0404a9a99ff0e
+0	73	1705090024510359000	CMakeFiles/open_mp_tasks_impl.dir/main.c.o	d10a68774be09897
+0	81	1705090024519245900	CMakeFiles/open_mp_tasks_impl.dir/sudoku_grid.c.o	7f8c201e734346a3
+1	148	1705090024585603500	CMakeFiles/open_mp_tasks_impl.dir/constraint_propagation.c.o	32cfd4ce71de2e23
+148	172	1705090024609287500	open_mp_tasks_impl	201744cded4d6c5b

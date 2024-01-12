@@ -105,3 +105,8 @@
   - alat poput linux "time"
 
 - u oba slucaja, pisace se shell skripta koja ce pokretati test scenario
+
+- shvatio sam da ako se stavi prevelik broj niti u paralelne regione samo se uspori program
+    - optimalno resenje je da se stavi kvadratni koren velicine sudokua da bi iole bio brzi program, ali i dalje nije brzi od sekvencijalnog resenja
+- ako se enabluje nested sinhronizacija i ne podesi gornji nesting level, istrose se svi resursi i pukne programa
+    - ako se odredi gornji level program samo bude mega mega giga spor

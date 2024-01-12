@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <omp.h>
 #include "stdio.h"
 #include "stdbool.h"
 #include "sudoku_grid.h"
@@ -69,7 +68,8 @@ SudokuGrid solve(SudokuGrid grid, bool* stopFlag){
 
     SudokuGrid finalResult = NULL;
     //Maximum SUDOKU_SIZE possibilities, so threads also
-    #pragma omp parallel num_threads(SUDOKU_SIZE) shared(finalResult, stopFlag)
+    int sudokuSizeSqrt = (int) sqrt(SUDOKU_SIZE);
+    #pragma omp parallel num_threads(sudokuSizeSqrt) shared(finalResult, stopFlag)
     {
         #pragma omp for
         for (int i = 0; i < possibilities_length; i++) {

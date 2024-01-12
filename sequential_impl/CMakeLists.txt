@@ -8,3 +8,6 @@ add_executable(sequential_impl
         sudoku_grid.h
         sudoku_grid.c
         constraint_propagation.c)
+
+# Add optimization flags
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")  # O3 for high-level optimization
