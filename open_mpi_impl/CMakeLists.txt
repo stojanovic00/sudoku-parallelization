@@ -8,5 +8,15 @@ add_executable(open_mpi_impl main.c
         sudoku_grid.c)
 
 
+# Find MPI package
+find_package(MPI REQUIRED)
+
+# Set include directories and compile flags
+include_directories(SYSTEM ${MPI_INCLUDE_PATH})
+set(CMAKE_C_COMPILER mpicc)  # Assuming you use the mpicc compiler
+
+# Link with MPI libraries
+target_link_libraries(open_mpi_impl ${MPI_C_LIBRARIES})
+
 # Add optimization flags
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")  # O3 for high-level optimization
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2")  # O3 for high-level optimization

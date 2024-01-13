@@ -51,19 +51,19 @@ build cmake_object_order_depends_target_sequential_impl: phony || CMakeFiles/seq
 
 build CMakeFiles/sequential_impl.dir/main.c.o: C_COMPILER__sequential_impl_unscanned_Debug /home/aleksandar/repositories/sudoku-parallelization/sequential_impl/main.c || cmake_object_order_depends_target_sequential_impl
   DEP_FILE = CMakeFiles/sequential_impl.dir/main.c.o.d
-  FLAGS = -O3 -g -std=gnu11 -fdiagnostics-color=always
+  FLAGS = -O2 -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/sequential_impl.dir
   OBJECT_FILE_DIR = CMakeFiles/sequential_impl.dir
 
 build CMakeFiles/sequential_impl.dir/sudoku_grid.c.o: C_COMPILER__sequential_impl_unscanned_Debug /home/aleksandar/repositories/sudoku-parallelization/sequential_impl/sudoku_grid.c || cmake_object_order_depends_target_sequential_impl
   DEP_FILE = CMakeFiles/sequential_impl.dir/sudoku_grid.c.o.d
-  FLAGS = -O3 -g -std=gnu11 -fdiagnostics-color=always
+  FLAGS = -O2 -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/sequential_impl.dir
   OBJECT_FILE_DIR = CMakeFiles/sequential_impl.dir
 
 build CMakeFiles/sequential_impl.dir/constraint_propagation.c.o: C_COMPILER__sequential_impl_unscanned_Debug /home/aleksandar/repositories/sudoku-parallelization/sequential_impl/constraint_propagation.c || cmake_object_order_depends_target_sequential_impl
   DEP_FILE = CMakeFiles/sequential_impl.dir/constraint_propagation.c.o.d
-  FLAGS = -O3 -g -std=gnu11 -fdiagnostics-color=always
+  FLAGS = -O2 -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/sequential_impl.dir
   OBJECT_FILE_DIR = CMakeFiles/sequential_impl.dir
 
@@ -76,7 +76,7 @@ build CMakeFiles/sequential_impl.dir/constraint_propagation.c.o: C_COMPILER__seq
 # Link the executable sequential_impl
 
 build sequential_impl: C_EXECUTABLE_LINKER__sequential_impl_Debug CMakeFiles/sequential_impl.dir/main.c.o CMakeFiles/sequential_impl.dir/sudoku_grid.c.o CMakeFiles/sequential_impl.dir/constraint_propagation.c.o
-  FLAGS = -O3 -g
+  FLAGS = -O2 -g
   OBJECT_DIR = CMakeFiles/sequential_impl.dir
   POST_BUILD = :
   PRE_LINK = :

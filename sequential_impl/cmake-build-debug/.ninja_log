@@ -1,6 +1,11 @@
 # ninja log v5
 1	155	1705090178910750200	CMakeFiles/sequential_impl.dir/constraint_propagation.c.o	f64e088bece7f533
 1	88	1705090178843710600	CMakeFiles/sequential_impl.dir/sudoku_grid.c.o	58bb91a6a22d1d46
-0	21	1705090390730569500	build.ninja	d9ba43d0511dd3ac
+0	21	1705092379646531200	build.ninja	d9ba43d0511dd3ac
 155	179	1705090178933720200	sequential_impl	4803796f94ea7900
 1	57	1705090178812130500	CMakeFiles/sequential_impl.dir/main.c.o	18ba54dd869c3d1c
+0	20	1705092379646531200	build.ninja	d9ba43d0511dd3ac
+1	49	1705092379702450000	CMakeFiles/sequential_impl.dir/main.c.o	1c8a0f740076d4c6
+0	73	1705092379726398800	CMakeFiles/sequential_impl.dir/sudoku_grid.c.o	9055ba4c507279c2
+1	104	1705092379757770800	CMakeFiles/sequential_impl.dir/constraint_propagation.c.o	56ba23dd2f3647c1
+104	127	1705092379779737900	sequential_impl	f9a043bc1a563024

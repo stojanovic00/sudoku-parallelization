@@ -10,4 +10,4 @@ add_executable(sequential_impl
         constraint_propagation.c)
 
 # Add optimization flags
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")  # O3 for high-level optimization
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2")  # O3 for high-level optimization

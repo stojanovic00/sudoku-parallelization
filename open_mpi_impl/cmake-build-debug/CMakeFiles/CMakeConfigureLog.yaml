@@ -431,3 +431,148 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:12 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kMrkL2"
+      binary: "/home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kMrkL2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kMrkL2
+        
+        Run Build Command(s):/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_97557 && [1/2] /usr/bin/cc   -std=gnu11 -o CMakeFiles/cmTC_97557.dir/test_mpi.c.o -c /home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kMrkL2/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-rpath -Wl,/usr/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_97557.dir/test_mpi.c.o -o cmTC_97557  /usr/lib/libmpi.so && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:12 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-O91AsP"
+      binary: "/home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-O91AsP"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-O91AsP
+        
+        Run Build Command(s):/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_4256e && [1/2] /usr/bin/cc   -std=gnu11 -o CMakeFiles/cmTC_4256e.dir/test_mpi.c.o -c /home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-O91AsP/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-rpath -Wl,/usr/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_4256e.dir/test_mpi.c.o -o cmTC_4256e  /usr/lib/libmpi.so && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:12 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1HK7Ew"
+      binary: "/home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1HK7Ew"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1HK7Ew
+        
+        Run Build Command(s):/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_6e66f && [1/2] /usr/bin/cc   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_6e66f.dir/test_mpi.c.o -c /home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1HK7Ew/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-rpath -Wl,/usr/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_6e66f.dir/test_mpi.c.o -o cmTC_6e66f  /usr/lib/libmpi.so && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:12 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-FVSuXl"
+      binary: "/home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-FVSuXl"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-FVSuXl
+        
+        Run Build Command(s):/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_16e53 && [1/2] /usr/bin/cc   -std=gnu11 -o CMakeFiles/cmTC_16e53.dir/test_mpi.c.o -c /home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-FVSuXl/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-rpath -Wl,/usr/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_16e53.dir/test_mpi.c.o -o cmTC_16e53  /usr/lib/libmpi.so && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:12 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AkMzoz"
+      binary: "/home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AkMzoz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AkMzoz
+        
+        Run Build Command(s):/home/aleksandar/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_2d3e6 && [1/2] /usr/bin/cc   -std=gnu11 -o CMakeFiles/cmTC_2d3e6.dir/test_mpi.c.o -c /home/aleksandar/repositories/sudoku-parallelization/open_mpi_impl/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AkMzoz/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-rpath -Wl,/usr/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_2d3e6.dir/test_mpi.c.o -o cmTC_2d3e6  /usr/lib/libmpi.so && :
+        
+      exitCode: 0
+...

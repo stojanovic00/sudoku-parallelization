@@ -110,6 +110,7 @@ bool storeSudokuGrid(SudokuGrid grid, char* file_path){
             return false;
         }
     }
+    fclose(csv_output_file);
     return true;
 }
 

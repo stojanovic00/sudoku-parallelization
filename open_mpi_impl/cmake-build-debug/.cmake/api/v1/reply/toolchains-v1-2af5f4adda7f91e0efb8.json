@@ -31,7 +31,7 @@
 						"gcc_s"
 					]
 				},
-				"path" : "/usr/bin/cc",
+				"path" : "mpicc",
 				"version" : "13.2.1"
 			},
 			"language" : "C",
