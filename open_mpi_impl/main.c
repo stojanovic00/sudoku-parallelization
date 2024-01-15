@@ -192,8 +192,8 @@ int main(int argc, char** argv){
         currentGrid[i] = (CellArray)malloc(SUDOKU_SIZE * sizeof(Cell));
     }
 
-    unsigned availabilities[SUDOKU_SIZE];
-    for(int i = 0; i < SUDOKU_SIZE;i++){
+    unsigned availabilities[num_proc];
+    for(int i = 0; i < num_proc;i++){
         availabilities[i] = true;
     }
 
@@ -208,7 +208,8 @@ int main(int argc, char** argv){
         if(solved(result)){
             Cell flattened[SUDOKU_SIZE*SUDOKU_SIZE];
             flattenSudokuGrid(result, flattened);
-            MPI_Send(flattened, SUDOKU_SIZE*SUDOKU_SIZE, cell_type, 0, 0, MPI_COMM_WORLD);
+//            MPI_Send(flattened, SUDOKU_SIZE*SUDOKU_SIZE, cell_type, 0, 0, MPI_COMM_WORLD);
+            MPI_Isend(flattened, SUDOKU_SIZE*SUDOKU_SIZE, cell_type, 0, 0, MPI_COMM_WORLD, NULL);
         } else {
             //Start processing with process 1
             //Send job
