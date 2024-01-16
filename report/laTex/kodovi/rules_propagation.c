@@ -16,8 +16,11 @@ bool propagateRulesForCell(SudokuGrid grid, int row, int col){
     //Remove from box unit
     for(int i = horizontal_start; i < horizontal_start + sudokuSizeRoot; i++){
         for(int j = vertical_start; j < vertical_start + sudokuSizeRoot; j++){
-            grid[i][j].possibilities = subtractPossibility(grid[i][j].possibilities,
-                                                           possibility_convertToBin(grid[row][col].value));
+            grid[i][j].possibilities =
+              subtractPossibility(
+                grid[i][j].possibilities,
+                possibility_convertToBin(
+                  grid[row][col].value));
         }
     }
 
